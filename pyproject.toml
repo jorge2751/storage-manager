@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "storage-manager"
+version = "0.1.0"
+description = "A CLI tool to help manage system storage"
+authors = ["Your Name <your.email@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+click = "^8.1.7"
+rich = "^13.7.0"
+pathspec = "^0.12.1"
+tqdm = "^4.67.0"
+
+[tool.poetry.scripts]
+storage-manager = "storage_manager:cli"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
