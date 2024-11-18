@@ -12,6 +12,11 @@ A command-line tool to help manage system storage by cleaning up unnecessary fil
   - Find screenshots older than specified days
   - Detailed information about each file
   - Safe deletion with confirmation
+- **Large Files Finder**: Find and manage large files consuming disk space
+  - Smart file type categorization (Video, Image, Document, etc.)
+  - Live storage usage visualization by file type
+  - Detailed file information (size, type, modified date)
+  - Interactive deletion with confirmation
 
 ## Installation
 
@@ -52,6 +57,22 @@ storage-manager clean-screenshots 60
 
 # Find and delete screenshots older than 30 days
 storage-manager clean-screenshots --delete
+```
+
+### Find Large Files
+
+```bash
+# Find files larger than 100MB (default) in home directory
+storage-manager find-large
+
+# Find files larger than 500MB in a specific directory
+storage-manager find-large /path/to/dir --min-size 500
+
+# Find and optionally delete large video files
+storage-manager find-large --type Video --delete
+
+# Find large files in current directory
+storage-manager find-large .
 ```
 
 ## Development
